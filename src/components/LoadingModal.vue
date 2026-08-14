@@ -6,7 +6,7 @@
         
         <div class="relative w-32 h-32 mb-8">
           
-          <div class="absolute inset-0 logo-mask bg-gray-400"></div>
+          <div class="absolute inset-0 logo-mask bg-white"></div>
 
           <div class="absolute inset-0 logo-mask overflow-hidden">
             

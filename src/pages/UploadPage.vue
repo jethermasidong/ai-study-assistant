@@ -23,7 +23,7 @@
         </div>
         <div class="w-full md:w-1/2 text-center lg:text-left mt-32 border border-gray-100 px-5 py-5 rounded-xl">
             <div 
-                class="w-full h-80 flex items-center justify-center border-dashed border-2 rounded-md cursor-pointer transition-all duration-200 hover:shadow-blue-500/70 hover:shadow-lg"
+                class="w-full h-80 flex items-center justify-center border-dashed border-2 rounded-md cursor-pointer transition-all duration-200 hover:shadow-blue-500/70 hover:shadow-lg hover:border-blue-500"
                 :class="isDragging ? 'border-blue-500 bg-blue-500/10 shadow-lg shadow-blue-500/70' : 'border-gray-500'"
                 @dragover.prevent="isDragging = true"
                 @dragleave.prevent="isDragging = false"
