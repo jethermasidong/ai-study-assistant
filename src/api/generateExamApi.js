@@ -1,7 +1,7 @@
 import api from "./api.js";
 
 
-export const generateExamApi = async (text) => {
+export const generateExamApi = async (text, questionCount, difficulty, questionTypes) => {
     try {
         const response = await api.post('/examination', {
             text,
