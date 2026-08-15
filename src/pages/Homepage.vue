@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-black text-white">
     
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 flex flex-col items-center text-center">
-        <div class="mt-30">
+        <div class="mt-20">
             <h1 class="text-2xl md:text-6xl font-extrabold tracking-tight text-white mb-3 leading-tight">
                 Upload, Review and Test<br class="hidden md:block" />
                 your Knowledge <br class="hidden md:block" />
@@ -26,7 +26,7 @@
                 Upload
                 </router-link>
                 
-                <router-link to="/verify" class="w-full sm:w-auto bg-white text-blue-600 border-2 border-blue-100 px-8 py-2 rounded-xl text-md font-semibold hover:bg-indigo-50 transition flex items-center justify-center gap-2">
+                <router-link to="/contacts" class="w-full sm:w-auto bg-white text-blue-600 border-2 border-blue-100 px-8 py-2 rounded-xl text-md font-semibold hover:bg-indigo-50 transition flex items-center justify-center gap-2">
                 <ion-icon name="help-circle-outline" class="text-xl"></ion-icon>
                 Feedback
                 </router-link>

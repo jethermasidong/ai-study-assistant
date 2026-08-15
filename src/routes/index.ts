@@ -1,6 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../pages/Homepage.vue' 
-import UploadPage from '../pages/UploadPage.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '../pages/Homepage.vue';
+import UploadPage from '../pages/UploadPage.vue';
+import ExamPage from '../pages/ExamPage.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -15,6 +16,12 @@ const router = createRouter({
       path: '/upload-page',
       name: 'upload',
       component: UploadPage
+    },
+
+    {
+      path: '/examination-page',
+      name: 'examination',
+      component: ExamPage
     }
 
 
