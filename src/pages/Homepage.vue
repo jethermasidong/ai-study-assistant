@@ -22,13 +22,13 @@
             
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4 w-full sm:w-auto">
                 <router-link to="/upload-page" class="w-full sm:w-auto bg-blue-600 text-white px-8 py-2 rounded-xl text-md font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                <ion-icon name="arrow-up-circle-outline" class="text-xl"></ion-icon>
-                Upload
+                    <ion-icon name="arrow-up-circle-outline" class="text-xl"></ion-icon>
+                    Upload
                 </router-link>
                 
                 <router-link to="/contacts" class="w-full sm:w-auto bg-white text-blue-600 border-2 border-blue-100 px-8 py-2 rounded-xl text-md font-semibold hover:bg-indigo-50 transition flex items-center justify-center gap-2">
-                <ion-icon name="help-circle-outline" class="text-xl"></ion-icon>
-                Feedback
+                    <ion-icon name="help-circle-outline" class="text-xl"></ion-icon>
+                    Feedback
                 </router-link>
             </div>
         </div>

@@ -1,10 +1,10 @@
 import api from "./api.js";
 
 
-export const summarizeApi = async (text) => {
+export const generateSummaryApi = async (formData) => {
     try {
-        const response = await api.post('/summarize', text);
-        return response.text;
+        const response = await api.post('/summarize', formData);
+        return response.data;
     } catch (err) {
         throw err.response?.text || err.message;
     }

@@ -54,7 +54,7 @@
             </div>
             <div class="flex flex-row gap-3">
                 <button 
-                    @click="startUpload" 
+                    @click="startGeneratingSummary" 
                     :disabled="!selectedFile"
                     class="w-full border rounded-2xl mt-5 px-1 py-1 transition-colors flex flex-row items-center justify-center gap-2"
                     :class="selectedFile ? 'border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white cursor-pointer' : 'border-gray-600 text-gray-600 cursor-not-allowed'"
@@ -140,6 +140,7 @@ import { ref } from 'vue';
 import LoadingModal from '../components/LoadingModal.vue';
 import { generateExamApi } from '../api/generateExamApi.js';
 import { useRouter } from 'vue-router';
+import { generateSummaryApi } from '@/api/summarizeApi.js';
 
 
 const router = useRouter();
@@ -188,6 +189,35 @@ const processFile = (file: File) => {
 };
 
 
+const startGeneratingSummary = async () => {
+    isLoading.value = true;
+    if (!selectedFile.value) {
+        return;
+    }
+
+    try {
+        const formData = new FormData();
+
+        formData.append('file', selectedFile.value);
+
+        const response = await generateSummaryApi(formData);
+        console.log("Exam successfully generated:", response);
+
+        localStorage.setItem('generatedSummary', JSON.stringify(response.summary));
+        router.push('/summary-page');
+
+    } catch (error) {
+        console.error("Failed to create summary:", error);
+        alert("Failed to generate examination");
+    } finally {
+        isLoading.value = false;
+    }
+
+}
+
+
+
+
 const numQuestions = ref(10);
 const difficulty = ref('easy');
 const examType = ref('multiple_choice');
@@ -234,12 +264,6 @@ const startGeneratingExam = async () => {
     }
 
 
-};
-
-
-const startUpload = () => {
-  if (!selectedFile.value) return;
-  console.log('Uploading:', selectedFile.value.name);
 };
 
 </script>
