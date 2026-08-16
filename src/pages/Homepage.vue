@@ -26,10 +26,10 @@
                     Upload
                 </router-link>
                 
-                <router-link to="/contacts" class="w-full sm:w-auto bg-white text-blue-600 border-2 border-blue-100 px-8 py-2 rounded-xl text-md font-semibold hover:bg-indigo-50 transition flex items-center justify-center gap-2">
+                <a href="mailto:jethermasidong@gmail.com" class="w-full sm:w-auto bg-white text-blue-600 border-2 border-blue-100 px-8 py-2 rounded-xl text-md font-semibold hover:bg-indigo-50 transition flex items-center justify-center gap-2">
                     <ion-icon name="help-circle-outline" class="text-xl"></ion-icon>
-                    Feedback
-                </router-link>
+                    Send Feedback
+                </a>
             </div>
         </div>
     </section>
